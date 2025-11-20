@@ -1,0 +1,11 @@
+[package]
+name = "modrn"
+version = "0.1.0"
+edition = "2021"
+authors = ["Rory Spring-Vanhorne <rory.spring@icloud.com>"]
+description = "Recursively updates mod.rs files in a Rust project to include pub mod lines"
+license = "MIT"
+
+[dependencies]
+console = "0.16.1"
+walkdir = "2.4"
