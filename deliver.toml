@@ -1,0 +1,47 @@
+[[file]]
+path = "src/main.rs"
+required = true
+forbid_regex = ["TODO", "FIXME", "unimplemented!", "todo!"]
+
+[[file]]
+path = "tests/cli.rs"
+required = true
+
+[[file]]
+path = "README.md"
+required = true
+
+[[file]]
+path = ".gitignore"
+required = true
+
+[[file]]
+path = "src/bin/cargo-modrn.rs"
+required = true
+
+[[file]]
+path = ".github/workflows/ci.yml"
+required = true
+
+[[file]]
+path = "Cargo.toml"
+required = true
+
+[[command]]
+name = "cargo fmt --check"
+cmd = ["cargo", "fmt", "--check"]
+expect_exit = 0
+timeout_secs = 60
+
+[[command]]
+name = "cargo clippy"
+cmd = ["cargo", "clippy", "--all-targets", "--", "-D", "warnings"]
+expect_exit = 0
+timeout_secs = 300
+
+[[command]]
+name = "cargo test"
+cmd = ["cargo", "test"]
+expect_exit = 0
+timeout_secs = 300
+stdout_contains = ["test result: ok"]

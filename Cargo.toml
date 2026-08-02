@@ -1,11 +1,17 @@
 [package]
 name = "modrn"
-version = "0.1.0"
+version = "0.3.0"
 edition = "2021"
 authors = ["Rory Spring-Vanhorne <rory.spring@icloud.com>"]
-description = "Recursively updates mod.rs files in a Rust project to include pub mod lines"
+description = "Keeps Rust module declarations (mod.rs, lib.rs, main.rs) in sync with the files on disk"
 license = "MIT"
+repository = "https://github.com/elci-group/modrn"
+keywords = ["rust", "modules", "codegen", "cli"]
+categories = ["command-line-utilities", "development-tools"]
 
 [dependencies]
 console = "0.16.1"
 walkdir = "2.4"
+
+[dev-dependencies]
+tempfile = "3"
